@@ -1,0 +1,46 @@
+#include "resource.h"
+#define APSTUDIO_READONLY_SYMBOLS
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#undef APSTUDIO_READONLY_SYMBOLS
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif
+IDI_BMAP	ICON	"BMAP.ico"
+IDI_SMALL	ICON	"small.ico"
+#endif
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif
+#ifdef APSTUDIO_INVOKED
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+#endif
+#endif
+#ifndef APSTUDIO_INVOKED
+#endif
