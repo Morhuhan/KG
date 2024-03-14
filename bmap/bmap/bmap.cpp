@@ -3,8 +3,8 @@
 #include "bmap.h"
 // путь к файлу BMP
 //#define PATH "..\\Debug\\ch01.bmp"      
-#define PATH "..\\Debug\\ch04.bmp"     
-//#define PATH "..\\Debug\\ch08.bmp"       
+//#define PATH "..\\Debug\\ch04.bmp"     
+#define PATH "..\\Debug\\ch08.bmp"       
 //#define PATH "..\\Debug\\ch24.bmp"      
 
 // исследование BMP
@@ -58,13 +58,18 @@ void bitmap() {
     // Создаем картинку
     //HBMP = CreateDIBitmap(DCBMP, &pbmi->bmiHeader, CBM_INIT, dibs, pbmi, DIB_RGB_COLORS);
 
-    // SelectObject(DCBMP, HBMP);
+    SelectObject(DCBMP, HBMP);
 
     int BMPX = pbmi->bmiHeader.biWidth;
     int BMPY = pbmi->bmiHeader.biHeight;
 
-    StretchDIBits(DCBMP, 0, 0, 20, 20, 0, 0, BMPX, BMPY, dibs, pbmi, DIB_RGB_COLORS, SRCCOPY);
-    
+    RGBQUAD* ppal = &pbmi->bmiColors[0];
+    pbmi->bmiColors[0].rgbRed = 255;
+    pbmi->bmiColors[0].rgbGreen = 255;
+    pbmi->bmiColors[0].rgbBlue = 0;
+
+    StretchDIBits(DCBMP, 0, 0, 200, 200, 0, 0, BMPX, BMPY, dibs, pbmi, DIB_RGB_COLORS, SRCCOPY);
+
     fclose(f);
 }
 
